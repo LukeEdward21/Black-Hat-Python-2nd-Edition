@@ -5,7 +5,7 @@ import socket
 import win32file
 
 
-def plain_ftp(doc_path, server='192.168.179.130'):
+def plain_ftp(doc_path, server):
     ftp = ftplib.FTP(server)
     ftp.login('anonymous', 'anon@example.com')
     ftp.cwd('/pub/')
@@ -16,7 +16,7 @@ def plain_ftp(doc_path, server='192.168.179.130'):
 
 def transmit(document_path):
     client = socket.socket()
-    client.connect(('192.168.179.130', 10000))
+    client.connect(('192.168.1.2', 10000))
     with open(document_path, 'rb') as f:
         win32file.TransmitFile(
             client,

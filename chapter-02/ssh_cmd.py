@@ -21,7 +21,7 @@ if __name__ == '__main__':
     user = input('Username: ')
     password = getpass.getpass('Password: ')
 
-    ip = input('Enter server IP: ') or '192.168.179.130'
+    ip = input('Enter server IP: ') or '192.168.1.2'
     port = input('Enter port or <CR>: ') or 22
     cmd = input('Enter command or <CR>: ') or 'id'
     ssh_command(ip, port, user, password, cmd)

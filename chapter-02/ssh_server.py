@@ -20,12 +20,12 @@ class Server(paramiko.ServerInterface):
         return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
 
     def check_auth_password(self, username: str, password: str) -> int:
-        if (username == 'lucas') and (password=='l12345678'):
+        if (username == 'lucas') and (password=='12345678'):
             return paramiko.AUTH_SUCCESSFUL
 
 
 if __name__ == '__main__':
-    server = '192.168.179.130'
+    server = '192.168.1.2'
     ssh_port = 2222
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

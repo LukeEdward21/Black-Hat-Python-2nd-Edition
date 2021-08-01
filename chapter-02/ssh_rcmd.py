@@ -34,6 +34,6 @@ if __name__ == '__main__':
     user = input('User: ') or 'luke'
     password = getpass.getpass()
 
-    ip = input('Enter Server IP: ') or '192.168.179.128'
+    ip = input('Enter Server IP: ') or '192.168.1.2'
     port = input('Enter port: ') or 2222
     ssh_command(ip, port, user, password, 'dir')
